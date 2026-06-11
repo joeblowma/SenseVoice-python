@@ -2,23 +2,22 @@
 
 [「简体中文」](./README.md)|「English」
 
-[SenseVoice](https://github.com/FunAudioLLM/SenseVoice) is an audio foundation model 
-with audio understanding capabilities, 
-including Automatic Speech Recognition (ASR), Language Identification (LID), 
-Speech Emotion Recognition (SER), and Acoustic Event Classification (AEC) 
-or Acoustic Event Detection (AED). 
+---
 
-Currently, SenseVoice-small supports multilingual speech recognition, emotion recognition, 
-and event detection for Chinese, Cantonese, English, Japanese, and Korean, with extremely low inference latency.
-This project provides the necessary ONNX environment installation 
-and inference methods for the Python version of the SenseVoice model.
+[SenseVoice](https://github.com/FunAudioLLM/SenseVoice) is an audio foundation model with audio understanding capabilities, including Automatic Speech Recognition (ASR), Language Identification (LID), Speech Emotion Recognition (SER), and Acoustic Event Classification (AEC) or Acoustic Event Detection (AED). 
+
+Currently, SenseVoice-small supports multilingual speech recognition, emotion recognition, and event detection for Chinese, Cantonese, English, Japanese, and Korean, with extremely low inference latency.
+
+This project provides the necessary ONNX environment installation and inference methods for the Python version of the SenseVoice model.
 
 ## Usage
 
-### Installation 
+### Installation
 
 ```bash
 pip install sensevoice-onnx
+
+# optionally install as sensevoice-onnx[gpu] or sensevoice-onnx[cpu] if you don't already have an onnxruntime installed
 
 # or pip from GitHub
 pip install git+https://github.com/lovemefan/SenseVoice-python.git

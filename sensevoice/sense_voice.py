@@ -3,6 +3,18 @@
 # @Time      :2024/7/18 15:40
 # @Author    :lovemefan
 # @Email     :lovemefan@outlook.com
+
+try:
+    import onnxruntime
+except ImportError:
+    raise ImportError(
+        "\n\n[SenseVoice Error]: An ONNX Runtime environment was not found.\n"
+        "Please install your preferred backend:\n"
+        "  - onnxruntime\n"
+        "  - onnxruntime-gpu\n"
+        "  - onnxruntime-directml\n"
+    )
+
 import argparse
 import logging
 import os
