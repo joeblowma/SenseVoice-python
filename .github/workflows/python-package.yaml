@@ -28,7 +28,7 @@ jobs:
     - name: Install dependencies
       run: |
         python3 -m pip install --upgrade pip
-        pip install -U setuptools wheel
+        pip install -U setuptools wheel onnxruntime
         pip3 install -e .
 
     - name: Test audio
