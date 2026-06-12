@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools", "wheel", "build", "twine"]
+build-backend = "setuptools.build_meta"
+
+[project]
+requires-python = ">= 3.9"
+name = "sensevoice-onnx"
+version = "1.1.1"
+authors = [ {name = "Lovemefan", email = "lovemefan@outlook.com"} ]
+description = "SenseVoice-python: open source multi-language asr system from funasr with onnxruntime"
+readme = "README-EN.md"
+license = "MIT"
+dependencies = [
+    "numpy>=1.24.4",
+    "kaldi_native_fbank",
+    "sentencepiece>=0.2.0",
+    "soundfile>=0.12.1",
+    "huggingface_hub",
+    "protobuf>=3.19.6"
+]
+keywords = ["asr", "speech", "ai", "audio-to-text"]
+classifiers = [
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX :: Linux",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules"
+]
+
+[project.scripts]
+sensevoice = "sensevoice.sense_voice:main"
+
+[project.optional-dependencies]
+cpu = ["onnxruntime>=1.17.0"]
+gpu = ["onnxruntime-gpu>=1.17.0"]
+
+[project.urls]
+Homepage = "https://github.com/lovemefan/SenseVoice-python"
+Repository = "https://github.com/lovemefan/SenseVoice-python.git"
